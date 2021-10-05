@@ -1,0 +1,113 @@
+*{
+    font-family: "Work Sans";
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin: 0 auto;
+    text-align: left;
+}
+
+a{
+    color: #FFFFFF;
+}
+
+h1{
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 2.5rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+header{
+    background-color: #004236;
+    color: #ffffff;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+img{
+    width: 100%;
+}
+
+#main-list{
+    padding-left: 0;
+}
+
+#main-list > li{
+    font-size: 1.2rem;
+    font-weight: 800;
+    list-style-type: none;
+    margin-bottom: 1rem;
+}
+
+.normal-content{
+    font-family: "Work Sans";
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.parent-container{
+    background-color: #D5CD61;
+    color: #004236;
+}
+
+.secondary-list > li{
+    font-weight: 800;
+    padding-bottom: 1rem;
+}
+
+.text-content{
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+    width: 80%;
+}
+
+@media(min-width: 800px){
+    a{
+        font-size: 1.2rem;
+    }
+
+    h1{
+        font-size: 3rem;
+        padding-bottom: 1rem;
+    }
+
+    header{
+        padding-bottom: 3rem;
+        padding-top: 3rem;
+    }
+
+    #main-list{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+            "triggers loops-modes" 
+            "rules feedback"
+        ;
+    }
+
+    #feedback{
+        grid-area: feedback;
+    }
+
+    #loops-modes{
+        grid-area: loops-modes;
+    }
+
+    #rules{
+        grid-area: rules;
+    }
+
+    #triggers{
+        grid-area: triggers;
+    }
+
+    #triggers, #loops-modes{
+        width: 100vw;
+        max-width: 100%;
+    }
+}
