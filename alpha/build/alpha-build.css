@@ -162,6 +162,10 @@ body{
 }
 
 /* Animation */
+button:hover{
+  cursor: pointer;
+}
+
 .hvr-shutter-in-horizontal {
   display: inline-block;
   vertical-align: middle;
