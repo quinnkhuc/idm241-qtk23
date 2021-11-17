@@ -1,0 +1,96 @@
+*{
+    font-family: "Work Sans";
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    margin: 0 auto;
+    text-align: left;
+}
+
+h1{
+    background-color: #004236;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 2rem 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+img{
+    display: block;
+    margin: 0 auto;
+    width: 75%;
+}
+
+#description{
+    background-color: #D5CD61;
+    color: #004236;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+}
+
+#description div{
+    margin: 0 auto;
+    padding-top: 1rem;
+    width: 80%;
+}
+
+.primary-list{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.primary-list>li{
+    font-weight: 400;
+}
+
+.primary-list>li:not(:last-child){
+    padding-bottom: 1rem;
+}
+
+@media(min-width: 768px){
+    img{
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+    }
+}
+
+@media(min-width: 1024px){
+    img{
+        display: block;
+        margin: 0 auto;
+        width: 25%;
+    }
+
+    #description{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "triggers ."
+            "rules feedback"
+            "loops-modes .";
+    }
+
+    #feedback{
+        grid-area: feedback;
+    }
+
+    #loops-modes{
+        grid-area: loops-modes;
+    }
+
+    #rules{
+        grid-area: rules;
+    }
+
+    #triggers{
+        grid-area: triggers;
+    }
+}
