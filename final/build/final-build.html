@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Final Build</title>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700,800,900'>
+    <link rel='stylesheet' href='final-build.css'>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+    <div id='main-container'>
+        <div id='product-container'>
+            <div id='product-header'>
+                <img src='assets/heart.png'>
+                <img src='assets/cart.png' id='cart'>
+                <span id='cart-count'></span>
+            </div>
+            <div id='product-grid'>
+                <div class='product' id='british-rose'>
+                    <img src='assets/british_rose.jpg' class='product-img' id='british-rose-img'>
+                    <div class='meta-data'>
+                        <p class='product-title'>British Rose Hand Wash</p>
+                        <div class='product-rating'>
+                            <img src='assets/star-icon.png'>
+                            <img src='assets/star-icon.png'>
+                            <img src='assets/star-icon.png'>
+                            <img src='assets/star-icon.png'>
+                            <img src='assets/star-icon.png'>
+                        </div>
+                        <p class='product-price'>$10.00</p>
+                    </div>
+                    <div class='cto'>
+                        <button type='button' class='add-to-card-button' onClick='toggleDropdown(0)'>
+                            <span class='cto-text'>Add to cart</span>
+                            <img src='assets/cart-white.png' class='cart-icon'>
+                        </button>
+                        <img src='assets/heart.png' class='like-icon'>
+                        <div class='dropdown-container'>
+                            <div class='dropdown-content'>
+                                <button class='dropdown-button' onClick="addToCart(1, 'british-rose', 'british-rose-img')">1</button>
+                                <button class='dropdown-button' onClick="addToCart(2, 'british-rose', 'british-rose-img')">2</button>
+                                <button class='dropdown-button' onClick="addToCart(3, 'british-rose', 'british-rose-img')">3</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='product' id='pink-grapefruit'>
+                    <img src='assets/pink_grapefruit.jpg' class='product-img' id='pink-grapefruit-img'>
+                    <div class='meta-data'>
+                        <p class='product-title'>British Rose Hand Wash</p>
+                        <div class='product-rating'>
+                            <img src='assets/star-icon.png'>
+                            <img src='assets/star-icon.png'>
+                            <img src='assets/star-icon.png'>
+                            <img src='assets/star-icon.png'>
+                            <img src='assets/star-icon.png'>
+                        </div>
+                        <p class='product-price'>$10.00</p>
+                    </div>
+                    <div class='cto'>
+                        <button type='button' class='add-to-card-button' onClick='toggleDropdown(1)'>
+                            <span class='cto-text'>Add to cart</span>
+                            <img src='assets/cart-white.png' class='cart-icon'>
+                        </button>
+                        <img src='assets/heart.png' class='like-icon'>
+                        <div class='dropdown-container'>
+                            <div class='dropdown-content'>
+                                <button class='dropdown-button' onClick="addToCart(1, 'pink-grapefruit', 'pink-grapefruit-img')">1</button>
+                                <button class='dropdown-button' onClick="addToCart(2, 'pink-grapefruit', 'pink-grapefruit-img')">2</button>
+                                <button class='dropdown-button' onClick="addToCart(3, 'pink-grapefruit', 'pink-grapefruit-img')">3</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='product' id='tea-tree'>
+                    <img src='assets/tea_tree.jpg' class='product-img' id='tea-tree-img'>
+                    <div class='meta-data'>
+                        <p class='product-title'>Tea Tree Hand Wash</p>
+                        <div class='product-rating'>
+                            <img src='assets/star-icon.png'>
+                            <img src='assets/star-icon.png'>
+                            <img src='assets/star-icon.png'>
+                            <img src='assets/star-icon.png'>
+                            <img src='assets/star-icon.png'>
+                        </div>
+                        <p class='product-price'>$15.00</p>
+                    </div>
+                    <div class='cto'>
+                        <button type='button' class='add-to-card-button' onClick='toggleDropdown(2)'>
+                            <span class='cto-text'>Add to cart</span>
+                            <img src='assets/cart-white.png' class='cart-icon'>
+                        </button>
+                        <img src='assets/heart.png' class='like-icon'>
+                        <div class='dropdown-container'>
+                            <div class='dropdown-content'>
+                                <button class='dropdown-button' onClick="addToCart(1, 'tea-tree', 'tea-tree-img')">1</button>
+                                <button class='dropdown-button' onClick="addToCart(2, 'tea-tree', 'tea-tree-img')">2</button>
+                                <button class='dropdown-button' onClick="addToCart(3, 'tea-tree', 'tea-tree-img')">3</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="description">
+            <div id="triggers">
+                <h2>Triggers</h2>
+                <p>On Hover, Off Hover, On Click</p>
+            </div>
+    
+            <div id="rules">
+                <h2>Rules</h2>
+                <ol class="primary-list">
+                    <li>On Hover
+                        <ol class="secondary-list">
+                            <li>Add to cart button:
+                                <ul class="tertiary-list">
+                                    <li>Background color changes to #004236</li>
+                                    <li>Text color changes #FFFFFF</li>
+                                    <li>Border disappears</li>
+                                    <li>Add to cart text moves slightly to the left</li>
+                                    <li>A cart icon fades in, shrinks in size, and settles on the right of add to cart text</li>
+                                    <li>Cursor changes to pointer</li>
+                                </ul>
+                            </li>
+    
+                            <li>Dropdown menu items:
+                                <ul>
+                                    <li>Background color changes to #D5CD61</li>
+                                    <li>Cursor changes to pointer</li>
+                                </ul>
+                            </li>
+                            
+                        </ol>
+                    </li>
+    
+                    <li>Off Hover
+                        <ol class="secondary-list">
+                            <li>Add to cart button:
+                                <ul class="tertiary-list">
+                                    <li>Background color changes to #FFFFFF</li>
+                                    <li>Text color changes #004236</li>
+                                    <li>A #004236 border appears around add to cart button</li>
+                                    <li>Add to cart text moves back to the center</li>
+                                    <li>Cart icon disappears</li>
+                                    <li>Cursor changes back to default</li>
+                                </ul>
+                            </li>
+    
+                            <li>Dropdown menu items: 
+                                <ul>
+                                    <li>Background color changes to #FFFFFF</li>
+                                    <li>Cursor changes back to default</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </li>
+                    
+                    <li>On Click
+                        <ol class="secondary-list">
+                            <li>Add to cart button: a menu fades in and drops down, revealing the numbers of items can be added to cart</li>
+                            <li>Anywhere outside add to cart button and dropdown menu: dropdown menu disappear</li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+    
+            <div id="feedback">
+                <h2>Feedback</h2>
+                <ol class="primary-list">
+                    <li>On Hover
+                        <ol class="secondary-list">
+                            <li>Add to cart button:
+                                <ul class="tertiary-list">
+                                    <li>Background color changes to #004236</li>
+                                    <li>Text color changes #FFFFFF</li>
+                                    <li>Border disappears</li>
+                                    <li>Add to cart text moves slightly to the right</li>
+                                    <li>A cart icon fades in, shrinks in size, and settles on the left of add to cart text</li>
+                                    <li>Cursor changes to pointer</li>
+                                </ul>
+                            </li>
+    
+                            <li>Dropdown menu items: 
+                                <ul>
+                                    <li>Background color changes to #D5CD61</li>
+                                    <li>Cursor changes to pointer</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </li>
+    
+                    <li>Off Hover
+                        <ol class="secondary-list">
+                            <li>Add to cart button:
+                                <ul class="tertiary-list">
+                                    <li>Background color changes to #FFFFFF</li>
+                                    <li>Text color changes #004236</li>
+                                    <li>A #004236 border appears around add to cart button</li>
+                                    <li>Add to cart text moves back to the center</li>
+                                    <li>Cart icon disappears</li>
+                                    <li>Cursor changes back to default</li>
+                                </ul>
+                            </li>
+    
+                            <li>Dropdown menu items: 
+                                <ul>
+                                    <li>Background color changes to #FFFFFF</li>
+                                    <li>Cursor changes back to default</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </li>
+                    
+                    <li>On Click
+                        <ol class="secondary-list">
+                            <li>Add to cart button: a menu fades in and drops down, revealing the numbers of items can be added to cart</li>
+                            <li>Anywhere outside add to cart button and dropdown menu: dropdown menu disappear</li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+    
+            <div id="loops-modes">
+                <h2>Loops & Modes</h2>
+                <p>Mode: a dropdown menu appears by clicking on add to cart button, revealing the numbers of items can be added to cart</p>
+            </div>
+        </div>
+    </div>
+
+    <script src='scripts.js'></script>
+</body>
+</html>
